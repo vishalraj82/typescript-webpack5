@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+    tswpapp:
+        image: tswpapp
+        container_name: tswpapp
+        build:
+            context: ../
+            dockerfile: ./docker/tswpapp.docker
+        volumes:
+            - ../dist:/usr/src/app/dist
+            - node_modules:/usr/src/app/node_modules
+    tswpproxy:
+        image: nginx:1.23.1-alpine
+        ports:
+            - 80:80
+        volumes:
+            - ../dist:/usr/share/nginx/html
+        depends_on:
+            - tswpapp
+volumes:
+    node_modules:
