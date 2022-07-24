@@ -50,7 +50,7 @@ const config: Webpack.Configuration = {
         }),
         new HtmlWebpackPlugin({
             inject: 'body',
-            template: path.join(__dirname, 'index.html.template'),
+            template: path.join(__dirname, 'index.html'),
         })
     ]
 };
