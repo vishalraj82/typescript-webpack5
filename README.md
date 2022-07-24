@@ -20,6 +20,9 @@ This repository requires docker for compiling and executing the code.
 
 Since we need a server to serve the generated code, hence here we are utilizing the nginx docker image to server the compiled contents. By default the port 80 on host machine is mapped to port 80 of the nginx container. In order to change this, please edit the file `docker/docker-compose.yml`.
 
+
+### NPM packages used
+
 Lets try to understand the npm packages from the file `package.json`
 
 - [@types/react](https://npmjs.com/package/@types/react) - TypeScript type definitions for React
@@ -38,3 +41,20 @@ The react package contains only the functionality necessary to define React comp
 - [typescript](https://npmjs.com/package/typescript) - TypeScript is a language for application-scale JavaScript. TypeScript adds optional types to JavaScript that support tools for large-scale JavaScript applications for any browser, for any host, on any OS. TypeScript compiles to readable, standards-based JavaScript.
 - [webpack](https://npmjs.com/package/webpack) - Webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
 - [webpack-cli](https://npmjs.com/package/webpack-cli) - webpack CLI provides a flexible set of commands for developers to increase speed when setting up a custom webpack project. As of webpack v4, webpack is not expecting a configuration file, but often developers want to create a more custom webpack configuration based on their use-cases and needs. webpack CLI addresses these needs by providing a set of tools to improve the setup of custom webpack configuration.
+
+
+### Understanding the Webpack configuration
+
+`mode` - Defines how Webpack with produce the final output.
+
+`entry` - Define the files which will be used by Webpack to start processing.
+
+`output` - Defines the location and the naming of the Webpack output files.
+
+`optimization` - Defines the strategy for optimization of the Webpack output.
+
+`resolve` - Since TypeScript forbids adding extension .ts or .tsx when importing, hence Webpack must know what extensions to use to resovle the file imports.
+
+`module` - Since Webpack is built only for Javascript, hence any other type of files in the source must be handled by third-party packages.
+
+`plugins` - Array of Webpack plugins to be used on the output produced by Webpack.
