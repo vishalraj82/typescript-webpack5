@@ -6,7 +6,8 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 const config: Webpack.Configuration = {
     mode: 'development',
     entry: {
-        'static/main': path.join(__dirname, 'src', 'index.tsx')
+        'static/main': path.join(__dirname, 'src', 'index.tsx'),
+        'static/clock': path.join(__dirname, 'src', 'examples', 'clock.tsx'),
     },
     output: {
         path: path.join(__dirname, '..', 'dist'),
@@ -51,7 +52,14 @@ const config: Webpack.Configuration = {
         new HtmlWebpackPlugin({
             inject: 'body',
             template: path.join(__dirname, 'index.html'),
-        })
+            chunks: ['static/vendor', 'static/main']
+        }),
+        new HtmlWebpackPlugin({
+            inject: 'body',
+            template: path.join(__dirname, 'index.html'),
+            filename: 'clock.html',
+            chunks: ['static/vendor', 'static/clock']
+        }),
     ]
 };
 
