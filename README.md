@@ -14,6 +14,10 @@ This repository requires docker for compiling and executing the code.
 
 #3 Compile the Typescript code using docker - `docker compose -f docker/docker-compose.yml up`
 
+#4 Open a tab in browser and visit the following URLs
+  - http://localhost/
+  - http://localhost/clock.html
+
 Since we need a server to serve the generated code, hence here we are utilizing the nginx docker image to server the compiled contents. By default the port 80 on host machine is mapped to port 80 of the nginx container. In order to change this, please edit the file `docker/docker-compose.yml`.
 
 Lets try to understand the npm packages from the file `package.json`
