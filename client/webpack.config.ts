@@ -20,7 +20,7 @@ const config: Webpack.Configuration = {
         }
     },
     resolve: {
-        extensions: ['.tsx', '.ts']
+        extensions: ['.tsx', '.ts', '.js']
     },
     module: {
         rules: [
