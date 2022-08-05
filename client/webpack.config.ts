@@ -30,6 +30,18 @@ const config: Webpack.Configuration = {
                 use: 'ts-loader',
             },
             {
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true
+                        }
+                    },
+                ]
+            },
+            {
                 test: /\.s[ac]ss$/,
                 exclude: /node_modules/,
                 use: [
