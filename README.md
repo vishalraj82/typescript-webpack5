@@ -29,7 +29,7 @@ Lets try to understand the npm packages from the file `package.json`
 - [@types/react-dom](https://npmjs.com/package/@types/react-dom) - TypeScript type defintions for React DOM
 - [@types/webpack](https://npmjs.com/package/@types/webpack) - Typescript type defintions for Webpack
 - [css-loader](https://npmjs.com/package/css-loader) - The css-loader interprets @import and url() like import/require() and will resolve them.
-- ['html-webpack-plugin](https://npmjs.com/package/html-webpack-plugin) - Plugin that simplifies creation of HTML files to serve your bundles
+- [html-webpack-plugin](https://npmjs.com/package/html-webpack-plugin) - Plugin that simplifies creation of HTML files to serve your bundles
 - [mini-css-extract-plugin](https://npmjs.com/package/mini-css-extract-plugin) - This plugin extracts CSS into separate files. It creates a CSS file per JS file which contains CSS. It supports On-Demand-Loading of CSS and SourceMaps. It builds on top of a new webpack v5 feature and requires webpack 5 to work.
 - [react](https://npmjs.com/package/react) - React is a JavaScript library for creating user interfaces.
 The react package contains only the functionality necessary to define React components. It is typically used together with a React renderer like react-dom for the web, or react-native for the native environments.
