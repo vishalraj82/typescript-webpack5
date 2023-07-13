@@ -7,7 +7,7 @@ const config: Webpack.Configuration = {
     mode: 'development',
     entry: {
         'static/main': path.join(__dirname, 'src', 'index.tsx'),
-        'static/clock': path.join(__dirname, 'src', 'examples', 'clock.tsx'),
+        'static/clock': path.join(__dirname, 'src', 'clock', 'index.tsx'),
     },
     output: {
         path: path.join(__dirname, '..', 'dist'),

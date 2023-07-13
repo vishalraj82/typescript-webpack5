@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react'; import { createRoot } from 'react-dom/client';
-import { pad } from './clockUtil';
-import { type ClockProps } from './clockTypes';
-import styles from './clock.sass';
+import { createRoot } from 'react-dom/client';
+import { useEffect, useState } from 'react';
+import { pad } from './utils';
+import { ClockProps } from './types';
+import styles from './styles.sass';
 
 const Clock = (props: ClockProps) => {
     const [hours, setHours] = useState(props.hours);
